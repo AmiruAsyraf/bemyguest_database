@@ -1,15 +1,15 @@
 class UsersController < ApplicationController
 
-def create_wishlist
+def traveller_wishlist
 end
 
-def profile_page_traveller
+def traveller_profile
 end
 
-def update_profile
+def traveller_profile_update
 end
 
-def update_wishlist
+def traveller_wishlist_update
 end
 
 end
