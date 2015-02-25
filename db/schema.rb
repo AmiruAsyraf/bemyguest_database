@@ -40,6 +40,7 @@ ActiveRecord::Schema.define(version: 20150224025203) do
   end
 
   create_table "refdurations", force: :cascade do |t|
+    t.string   "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -81,6 +82,7 @@ ActiveRecord::Schema.define(version: 20150224025203) do
     t.string   "name"
     t.string   "state"
     t.string   "place_of_interest"
+    t.string   "wish_service",      default: "wish"
     t.datetime "start"
     t.datetime "end"
     t.string   "duration"
@@ -91,10 +93,9 @@ ActiveRecord::Schema.define(version: 20150224025203) do
     t.string   "food_type"
     t.string   "transport"
     t.string   "accomodation"
-    t.string   "wish_service"
     t.string   "poster_image"
-    t.datetime "created_at",        null: false
-    t.datetime "updated_at",        null: false
+    t.datetime "created_at",                         null: false
+    t.datetime "updated_at",                         null: false
   end
 
   create_table "users", force: :cascade do |t|
@@ -102,6 +103,7 @@ ActiveRecord::Schema.define(version: 20150224025203) do
     t.string   "last_name"
     t.string   "email"
     t.string   "password"
+    t.integer  "role",              default: 2
     t.string   "address"
     t.integer  "postcode"
     t.string   "state"
@@ -111,7 +113,6 @@ ActiveRecord::Schema.define(version: 20150224025203) do
     t.string   "race"
     t.string   "phone_number"
     t.string   "skype"
-    t.integer  "role",              default: 2
     t.string   "medical_condition"
     t.string   "profile_picture"
     t.datetime "created_at",                    null: false
