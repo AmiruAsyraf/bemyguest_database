@@ -7,19 +7,17 @@
 		<div class="col-md-12">
 			<label>Country :</label>
 			<select name="slc_country" class="form-control">
-			<option value="malaysia">Malaysia</option>
-			<option value="japan">Japan</option>
-			<option value="korea">Korea</option>
-			<option value="china">China</option>
+			<% @countries.each do |country|%>
+			<option value="<% country.id %>"><%= country.name%></option>
+			<% end %>
 			</select>
 			<br />
 
 			<label>State :</label>
 			<select name="slc_state" class="form-control">
-			<option value="malaysia">Malaysia</option>
-			<option value="japan">Japan</option>
-			<option value="korea">Korea</option>
-			<option value="china">China</option>
+			<% @states.each do |state|%>
+			<option value="<% state.id %>"><%= state.name%></option>
+			<% end %>
 			</select>
 			<br />
 
@@ -29,10 +27,9 @@
 
 			<label>Duration :</label>
 			<select name="slc_duration" class="form-control">
-			<option value="1">5 Hour</option>
-			<option value="2">10 Hour</option>
-			<option value="3">1 Day</option>
-			<option value="4">2 Day</option>
+			<% @durations.each do |duration|%>
+			<option value="<% duration.id %>"><%= duration.name%></option>
+			<% end %>
 			</select>
 			<br />
 
