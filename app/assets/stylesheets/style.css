@@ -181,7 +181,8 @@ Intro
 ================================= */
 
 #intro{
-    height:635px;
+	margin-top: -210px;
+    height:100%;
     width:100%;
     /*background-color: #529abb;*/
     background-image: url("/assets/bg-mac.png");
@@ -578,3 +579,4 @@ more media queries
 		background-image: none;
 	}
 }
+
