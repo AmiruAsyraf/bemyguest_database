@@ -6,10 +6,10 @@ class CreateUsers < ActiveRecord::Migration
     	t.string :email
     	t.string :password
         t.integer :role, default: 2 #1 admin 2 travellar 3 agent
-    	t.string :address, null: true
+    	t.string :country_name, null: true
+        t.string :address, null: true
     	t.integer :postcode, null: true
     	t.string :state, null: true
-        t.integer :country_id, null: true
         t.string :gender, null: true
     	t.string :religion, null: true
     	t.string :race, null: true

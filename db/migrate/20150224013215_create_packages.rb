@@ -2,7 +2,7 @@ class CreatePackages < ActiveRecord::Migration
   def change
     create_table :packages do |t|
       t.integer :user_id
-      t.integer :country_id
+      t.string :country_name
       t.string :name
       t.string :state
       t.string :place_of_interest

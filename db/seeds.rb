@@ -6,15 +6,15 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 u1 = User.create(first_name:"Hakimin", last_name:"Johari", email:"kimin_1411@yahoo.com", password:"1234")
-w1 = u1.services.create(country_id:1, name:"tidur", state:"Chiba",place_of_interest:"Disneyland")
+w1 = u1.services.create(country_name: "Japan", name:"tidur", state:"Chiba", place_of_interest:"Disneyland")
 
 a1 = User.create(first_name:"Amiru", last_name:"Asyraf", email:"amiruasyraf@gmail.com", password:"12345", role: 3)
-p1 = a1.packages.create(country_id:1, name:"Package Disneyland", state:"Chiba", place_of_interest:"Disneyland")
-s1 = a1.services.create(country_id:1, name:"Jom makan tempat best", state:"Yokohama",place_of_interest:"Minato mirai", wish_service: "service")
+p1 = a1.packages.create(country_name:"Japan", name:"Package Disneyland", state:"Chiba", place_of_interest:"Disneyland")
+s1 = a1.services.create(country_name:"Japan", name:"Jom makan tempat best", state:"Yokohama",place_of_interest:"Minato mirai", wish_service: "service")
 
 a2 = User.create(first_name:"Kamal", last_name:"Iqlas", email:"kamaliqlas@gmail.com", password:"12345", role: 3)
-p2 = a2.packages.create(country_id:1, name:"Package Sakura", state:"Tokyo", place_of_interest:"Tachikawa Kouen")
-s2 = a2.services.create(country_id:1, name:"teman shopping", state:"Tokyo",place_of_interest:"Shinjuku", wish_service: "service")
+p2 = a2.packages.create(country_name:"Japan", name:"Package Sakura", state:"Tokyo", place_of_interest:"Tachikawa Kouen")
+s2 = a2.services.create(country_name:"Japan", name:"teman shopping", state:"Tokyo",place_of_interest:"Shinjuku", wish_service: "service")
 
 c1 = Refcountry.create(name: "Malaysia")
 c1.refstates.create(name: "Selangor")
