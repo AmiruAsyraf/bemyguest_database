@@ -1,6 +1,9 @@
 
 
 <h1>List of Services</h1>
+<% @services.each do |x|%>
+<p><%= x.name %>   <%= x.place_of_interest %></p>
+<% end %>
 
 
 

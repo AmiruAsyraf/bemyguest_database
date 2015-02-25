@@ -1,7 +1,9 @@
 
 
 <h1>List of Packages</h1>
-
+<% @packages.each do |x|%>
+<p><%= x.name %>   <%= x.place_of_interest %></p>
+<% end %>
 
 
 

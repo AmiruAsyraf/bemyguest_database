@@ -2,7 +2,7 @@ class CreateServices < ActiveRecord::Migration
   def change
     create_table :services do |t|
 		t.integer :user_id
-    	t.integer :country_id
+    	t.integer :country_name
         t.string :name
     	t.string :state
     	t.string :place_of_interest
