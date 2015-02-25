@@ -6,22 +6,20 @@
 <div class="container">
   <div class="row">
     <div class="col-md-12">
-      
+
         <label>Country :</label>
         <select name="slc_country" class="form-control">
-        <option value="malaysia">Malaysia</option>
-        <option value="japan">Japan</option>
-        <option value="korea">Korea</option>
-        <option value="china">China</option>
+        <% @countries.each do |country|%>
+            <option value="<% country.id %>"><%= country.name%></option>
+        <% end %>
         </select>
         <br />
 
         <label>State :</label>
         <select name="slc_state" class="form-control">
-        <option value="malaysia">Malaysia</option>
-        <option value="japan">Japan</option>
-        <option value="korea">Korea</option>
-        <option value="china">China</option>
+         <% @states.each do |state|%>
+            <option value="<% state.id %>"><%= state.name%></option>
+        <% end %>
         </select>
         <br />
 
@@ -39,18 +37,17 @@
 
         <label>Duration :</label>
         <select name="slc_duration" class="form-control">
-        <option value="1">5 Hour</option>
-        <option value="2">10 Hour</option>
-        <option value="3">1 Day</option>
-        <option value="4">2 Day</option>
+        <% @durations.each do |duration|%>
+            <option value="<% duration.id %>"><%= duration.name%></option>
+        <% end %>
         </select>
         <br />
 
         <label>Price Range :</label>
         <select name="slc_price_range" class="form-control">
-        <option value="1"> below 99</option>
-        <option value="2"> 99 - 199</option>
-        <option value="3"> 199 - 299 </option>
+        <% @priceranges.each do |pricerange|%>
+            <option value="<% pricerange.id %>"><%= pricerange.name%></option>
+        <% end %>
         </select>
         <br />
 
@@ -67,16 +64,17 @@
 
         <label>Transport :</label>
         <select name="slc_transport" class="form-control">
-        <option value="1">Halal</option>
-        <option value="2">Vegetarian</option>
+         <% @transports.each do |transport|%>
+           <option value="<% transport.id %>"><%= transport.name%></option>
+        <% end %>>
         </select>
         <br />
 
         <label>Accomodation :</label>
         <select name="slc_accomodation" class="form-control">
-        <option value="1">None</option>
-        <option value="2">Hotel</option>
-        <option value="3">Homestay</option>
+         <% @accomodations.each do |accomodation|%>
+           <option value="<% accomodation.id %>"><%= accomodation.name%></option>
+        <% end %>
         </select>
         <br />
 
