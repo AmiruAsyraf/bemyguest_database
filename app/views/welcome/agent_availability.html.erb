@@ -31,12 +31,19 @@
 
 
 <section id="agent_availability" class="home-section bg-white">
+
 <h1>List of Agents</h1>
 <% @agents.each do |agent|%>
 <p><%= agent.name %></p>
+
+<h1>List of Agent</h1>
+<% @agents.each do |x|%>
+<p><%= x.first_name %> <%= x.last_name %>   <%= x.country_id %></p>
+
 <% end %>
 <p><%= link_to "Back", root_path %></p>
 </section>
+
 
 
 

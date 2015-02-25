@@ -32,10 +32,11 @@
 
 <section id="package_list" class="home-section bg-white">
 <h1>List of Packages</h1>
-<% @packages.each do |package|%>
-<p><%= package.name %></p>
+<% @packages.each do |x|%>
+<p><%= x.name %>   <%= x.place_of_interest %></p>
 <% end %>
 <p><%= link_to "Back", root_path %></p>
 </section>
+
 
 

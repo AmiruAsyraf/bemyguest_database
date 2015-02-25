@@ -15,7 +15,7 @@ ActiveRecord::Schema.define(version: 20150224025203) do
 
   create_table "packages", force: :cascade do |t|
     t.integer  "user_id"
-    t.integer  "country_id"
+    t.string   "country_name"
     t.string   "name"
     t.string   "state"
     t.string   "place_of_interest"
@@ -78,7 +78,7 @@ ActiveRecord::Schema.define(version: 20150224025203) do
 
   create_table "services", force: :cascade do |t|
     t.integer  "user_id"
-    t.integer  "country_id"
+    t.string   "country_name"
     t.string   "name"
     t.string   "state"
     t.string   "place_of_interest"
@@ -104,10 +104,10 @@ ActiveRecord::Schema.define(version: 20150224025203) do
     t.string   "email"
     t.string   "password"
     t.integer  "role",              default: 2
+    t.string   "country_name"
     t.string   "address"
     t.integer  "postcode"
     t.string   "state"
-    t.integer  "country_id"
     t.string   "gender"
     t.string   "religion"
     t.string   "race"

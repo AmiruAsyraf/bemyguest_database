@@ -51,4 +51,5 @@ class UsersController < ApplicationController
     @priceranges = Refpricerange.all
   end
 
+
 end
