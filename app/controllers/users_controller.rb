@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-
+    
   def agent_apply_form
     @countries = Refcountry.all
     @genders = Refcountry.all
