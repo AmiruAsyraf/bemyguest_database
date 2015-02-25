@@ -1,9 +1,31 @@
 Rails.application.routes.draw do
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
+  
+
+  root 'welcome#index'
+
+  get 'welcome/agent_availability'
+  get 'welcome/package_list'
+  get 'welcome/service_list'
+
+  get 'users/traveller_wishlist'
+  get 'users/traveller_profile'
+  get 'users/traveller_profile_update'
+  get 'users/traveller_wishlist_update'
+  get 'users/traveller_register_form'
+
+  get 'users/agent_apply_form'
+  get 'users/agent_package_create'
+  get 'users/agent_package_update'
+  get 'users/agent_profile_page'
+  get 'users/agent_profile_update'
+  get 'users/agent_service_create'
+  get 'users/agent_service_update'
 
   # You can have the root of your site routed with "root"
-  # root 'welcome#index'
+
+# resources :users
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

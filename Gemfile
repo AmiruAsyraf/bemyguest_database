@@ -43,3 +43,7 @@ group :development, :test do
   gem 'spring'
 end
 
+# Get bootstrap gem 24 february 2015.
+gem 'bootstrap-sass', '~> 3.2.0'
+gem 'autoprefixer-rails'
+
