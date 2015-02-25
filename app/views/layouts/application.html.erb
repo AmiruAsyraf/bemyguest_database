@@ -6,7 +6,128 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
+<body data-no-turbolink>
+
+<!-- INFO MENU -->
+<section id="info_menu" class="home-section bg-white">
+	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand page-scroll" href="#">beMYguest</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav">
+                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+            <li><%= link_to "Packages", welcome_package_list_path %></li>
+
+            <li><%= link_to "Services", welcome_service_list_path %></li>
+
+            <li><%= link_to "Agents", welcome_agent_availability_path %></li>
+
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+</section>
+
+
+	<!-- AGENT MENU -->
+<section id="agent_menu" class="home-section bg-white">
+	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand page-scroll" href="#">beMYguest</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav">
+                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                  	<li class="dropdown">
+         	 			<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Profile <span class="caret"></span></a>
+				          <ul class="dropdown-menu" role="menu">
+				            <li><%= link_to "Update Your Profile", users_agent_profile_update_path %></li>
+				          </ul>
+       			    </li>
+
+					<li class="dropdown">
+         	 			<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Packages <span class="caret"></span></a>
+				          <ul class="dropdown-menu" role="menu">
+				            <li><%= link_to "Create Package", users_agent_package_create_path %></li>
+				            <li><%= link_to "Update Package", users_agent_package_update_path %></li>
+				          </ul>
+       			    </li>
+
+       			    <li class="dropdown">
+         	 			<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Services <span class="caret"></span></a>
+				          <ul class="dropdown-menu" role="menu">
+				            <li><%= link_to "Create Service", users_agent_service_create_path %></li>
+				            <li><%= link_to "Update Service", users_agent_service_update_path %></li>
+				          </ul>
+       			    </li>
+
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+</section>
+<!-- TRAVELLER MENU -->
+<section id="traveller_menu" class="home-section bg-white">
+	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand page-scroll" href="#">beMYguest</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav">
+                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                  	<li class="dropdown">
+         	 			<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Profile <span class="caret"></span></a>
+				          <ul class="dropdown-menu" role="menu">
+				            <li><%= link_to "Update Your Profile", users_traveller_profile_update_path %></li>
+				          </ul>
+       			    </li>
+
+					<li class="dropdown">
+         	 			<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Wishlist <span class="caret"></span></a>
+				          <ul class="dropdown-menu" role="menu">
+				            <li><%= link_to "Create Wishlist", users_traveller_wishlist_path %></li>
+				            <li><%= link_to "Update Wishlist", users_traveller_wishlist_update_path %></li>
+				          </ul>
+       			    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+</section>
 
 <%= yield %>
 
