@@ -12,7 +12,7 @@ a1 = User.create(first_name:"Amiru", last_name:"Asyraf", email:"amiruasyraf@gmai
 p1 = a1.packages.create(country_name:"Japan", name:"Package Disneyland", state:"Chiba", place_of_interest:"Disneyland")
 s1 = a1.services.create(country_name:"Japan", name:"Jom makan tempat best", state:"Yokohama",place_of_interest:"Minato mirai", wish_service: "service")
 
-a2 = User.create(first_name:"Kamal", last_name:"Iqlas", email:"kamaliqlas@gmail.com", password:"12345", role: 3)
+a2 = User.create(first_name:"Kamal", last_name:"Iqlaas", email:"kamaliqlaas@gmail.com", password:"12345", role: 3)
 p2 = a2.packages.create(country_name:"Japan", name:"Package Sakura", state:"Tokyo", place_of_interest:"Tachikawa Kouen")
 s2 = a2.services.create(country_name:"Japan", name:"teman shopping", state:"Tokyo",place_of_interest:"Shinjuku", wish_service: "service")
 
