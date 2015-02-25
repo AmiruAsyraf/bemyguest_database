@@ -6,9 +6,9 @@ class CreatePackages < ActiveRecord::Migration
       t.string :name
       t.string :state
       t.string :place_of_interest
-      t.string :duration
+      t.string :duration, null: true
       t.string :description, null: true
-      t.string :price_range
+      t.string :price_range, null: true
       t.string :poster_image, null: true
 
       t.timestamps null: false

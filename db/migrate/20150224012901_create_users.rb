@@ -5,6 +5,7 @@ class CreateUsers < ActiveRecord::Migration
     	t.string :last_name
     	t.string :email
     	t.string :password
+        t.integer :role, default: 2 #1 admin 2 travellar 3 agent
     	t.string :address, null: true
     	t.integer :postcode, null: true
     	t.string :state, null: true
@@ -14,7 +15,6 @@ class CreateUsers < ActiveRecord::Migration
     	t.string :race, null: true
     	t.string :phone_number, null: true
     	t.string :skype, null: true
-    	t.integer :role, default: 2 #1 admin 2 travellar 3 agent
     	t.string :medical_condition, null: true
     	t.string :profile_picture, null: true
     	

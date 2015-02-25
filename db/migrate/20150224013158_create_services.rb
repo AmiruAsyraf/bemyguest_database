@@ -6,9 +6,10 @@ class CreateServices < ActiveRecord::Migration
         t.string :name
     	t.string :state
     	t.string :place_of_interest
-    	t.datetime :start
-    	t.datetime :end
-    	t.string :duration
+        t.string :wish_service, default: "wish" #"wish" "service"
+    	t.datetime :start, null: true
+    	t.datetime :end, null: true
+    	t.string :duration, null: true
     	t.string :price_range, null: true
     	t.datetime :expired_date, null: true
     	t.string :description, null: true
@@ -16,7 +17,7 @@ class CreateServices < ActiveRecord::Migration
     	t.string :food_type, null: true
     	t.string :transport, null: true
     	t.string :accomodation, null: true
-    	t.string :wish_service #wish or service
+  
     	t.string :poster_image, null: true
 
       t.timestamps null: false
