@@ -78,10 +78,9 @@
 
 <label>Country :</label>
 <select name="slc_country" class="form-control">
-  <option value="malaysia">Malaysia</option>
-  <option value="japan">Japan</option>
-  <option value="korea">Korea</option>
-  <option value="china">China</option>
+  <% @countries.each do |country|%>
+    <option value="<% country.id %>"><%= country.name%></option>
+  <% end %>
 </select>
 <br />
 
@@ -94,15 +93,17 @@
 
 <label>Religion :</label>
 <select name="slc_religion" class="form-control">
-  <option value="islam">Islam</option>
-  <option value="hindu">Hindu</option>
+  <% @religions.each do |religion|%>
+    <option value="<% religion.id %>"><%= religion.name%></option>
+  <% end %>
 </select>
 <br />
 
 <label>Race :</label>
 <select name="slc_race" class="form-control">
-  <option value="malay">Malay</option>
-  <option value="indian">Indian</option>
+  <% @races.each do |race|%>
+    <option value="<% race.id %>"><%= race.name%></option>
+  <% end %>
 </select>
 <br />
 

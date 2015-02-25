@@ -1,3 +1,5 @@
+	<h1>Update Your Plan.</h1>
+
 <section id="menu" class="home-section bg-white">
 	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
         <div class="container">
@@ -46,24 +48,25 @@
 
 			<label>Country you would like to Go :</label>
 			<select name="slc_country" class="form-control">
-			 <option value="malaysia">Malaysia</option>
-			 <option value="japan">Japan</option>
-			 <option value="korea">Korea</option>
-			 <option value="china">China</option>
+			  <% @countries.each do |country|%>
+           <option value="<% country.id %>"><%= country.name%></option>
+        <% end %>
 			</select>
 			<br />
 
 			<label>State which you like to visit :</label><br>
 			<select name="slc_state" class="form-control">
-			 <option value="capital">Big Cities</option>
-			 <option value="rural">Rural Areas</option>
+			  <% @states.each do |state|%>
+           <option value="<% state.id %>"><%= state.name%></option>
+        <% end %>
 			</select>
 			<br />
 
 			<label>Do you need a transport? :</label>
 			<select name="slc_transport" class="form-control">
-			 <option value="yes_transport">Yes</option>
-			 <option value="no_transport">No</option>
+			  <% @transports.each do |transport|%>
+           <option value="<% transport.id %>"><%= transport.name%></option>
+        <% end %>
 			</select>
 			<br />
 
@@ -77,16 +80,16 @@
 
 			<label>Accomodation ? :</label>
 			<select name="slc_accomodation" class="form-control">
-			 <option value="yes_accomodation">Yes</option>
-			 <option value="no_accomodation">No</option>
-			 <option value="none_accomodation">No Issue</option>
+			  <% @accomodations.each do |accomodation|%>
+           <option value="<% accomodation.id %>"><%= accomodation.name%></option>
+        <% end %>
 			</select><br>
 
 			<label>Your price range? :</label>
 			<select name="slc_price" class="form-control">
-			 <option value="low">Low</option>
-			 <option value="medium">Medium</option>
-			 <option value="high">High</option>
+			  <% @priceranges.each do |pricerange|%>
+          <option value="<% pricerange.id %>"><%= pricerange.name%></option>
+        <% end %>
 			</select><br>
 
 			<label>Date Time Start :</label>
@@ -103,4 +106,4 @@
 	</div>
 
 </section>
-	
+
